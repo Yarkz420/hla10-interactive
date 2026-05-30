@@ -4,12 +4,30 @@
     <meta charset="utf-8" />
     <title>Pong Game</title>
     <script src="https://cjrtnc.leaningtech.com/4.3/loader.js"></script>
+
+    <style>
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #000;
+      }
+    </style>
   </head>
+
   <body>
     <script>
       (async function () {
         await cheerpjInit({ version: 11 });
-        cheerpjCreateDisplay(900, 600);
+        cheerpjCreateDisplay(1350, 900);
+
         const jarPath = "/app" + new URL("ponggame.jar", window.location.href).pathname;
         await cheerpjRunJar(jarPath);
       })();

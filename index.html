@@ -10,7 +10,8 @@
       (async function () {
         await cheerpjInit({ version: 11 });
         cheerpjCreateDisplay(900, 600);
-        await cheerpjRunJar("ponggame.jar");
+        const jarPath = "/app" + new URL("ponggame.jar", window.location.href).pathname;
+        await cheerpjRunJar(jarPath);
       })();
     </script>
   </body>
